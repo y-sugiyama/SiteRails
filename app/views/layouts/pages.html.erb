@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LoginRails</title>
+        <title>SiteRails</title>
         <%= csrf_meta_tags %>
 <%#*CSSを読み込むタグを生成します%>
         <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track' => true %>
@@ -26,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/top">LoginRails</a>
+                    <a class="navbar-brand" href="/top">SiteRails</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,6 +36,7 @@
                         <li><%=link_to 'ホーム', users_path %></li>
                         <li><%=link_to 'このサイトについて', about_path %></li>
                         <li><%=link_to 'アクセス', access_path %></li>
+                        <li><%=link_to 'お知らせ', news_path %></li>
 
                     </ul>
 

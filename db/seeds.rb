@@ -6,7 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#Active Recordのオブジェクトはハッシュやブロックから作成することができます。
+#また、作成後に属性を手動で追加できます。
+#newメソッドを実行すると単に新しいオブジェクトが返されますが、
+#createを実行すると新しいオブジェクトが返され、さらにデータベースに保存されます。
 
-user = User.create(email: 'admin@admin.com', password: 'admin123',password_confirmation:'admin123',role:'admin' )
 
-puts user.attributes.to_yaml
+User.create(email: 'admin@admin.com', password: 'admin123',password_confirmation:'admin123',role:'admin' )
