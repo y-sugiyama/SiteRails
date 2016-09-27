@@ -2,7 +2,11 @@ Rails.application.routes.draw do
  
 
 #スコープの広いもの（rootとか）は後のほうに定義
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only: [:new, :thank, :confirm]
+  post 'contacts' => 'contacts#confirm'
+  get 'contacts/confirm' => 'contacts#confirm'
+  get 'contacts/thanks' => 'contacts#thanks'
+  
   resources :posts
   
   

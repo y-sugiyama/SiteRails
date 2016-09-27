@@ -1,0 +1,40 @@
+
+<div class="row" id="contact">
+    <div class="col-md-6 col-md-offset-3"> 
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading" id="login"><h4><%='確認画面'%></h4></div>
+            <div class="panel-body">
+
+                <%= simple_form_for(@contact, url: contacts_confirm_path) do |f| %>
+                  <table class="table">
+                      <tr>
+                          <th>  <%= f.input :name  , input_html: { class: 'hidden' } %></th>
+                          <td>
+                                <%= @contact.name %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th> <%= f.input  :email ,  input_html: { class: 'hidden' } %></th>
+                            <td>
+                                  <%= @contact.email %>
+                              </td>
+                          </tr>
+                          <tr>
+                              <th> <%= f.input  :message , input_html: { class: 'hidden' } %></th>
+                              <td>
+                                    <%= simple_format(@contact.message) %>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <%= f.button :submit,  "送信", class: "btn btn-primary" %>
+                        <% end %>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>

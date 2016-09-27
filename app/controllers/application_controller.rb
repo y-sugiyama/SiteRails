@@ -3,8 +3,11 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   
+  #Bankenを使って権限管理する
   include Banken
   
+  
+  #権限がない userが権限が必要なアクションにアクセスしようとしたときにエラーメッセージを表示する
 rescue_from Banken::NotAuthorizedError, with: :user_not_authorized
 
   private

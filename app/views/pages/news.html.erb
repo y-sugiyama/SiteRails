@@ -6,16 +6,18 @@
 </div>
 
 <div class="row">
-      <%#  @posts.each do |post| %>
+      <%  @posts.each do |post| %>
         <div class="col-sm-6 col-md-4" id="news">
             <div class="thumbnail">
                 
-                <%#*<h6> <%= link_to post.created_at  %></h6>%>
-                <%#*<h3><%= link_to post.title %> </h3>%>
-                <%#*<p> <%= link_to post.body  %></p>%>
+                <h6> <%= link_to post.created_at  %></h6>
+                <h3><%= link_to post.title %> </h3>
+                <p> <%= link_to post.body  %></p>
 
-            
+     
             </div>
         </div>
-    <% #end %>
+    <% end %>
 </div>
+
+<%= paginate @posts %>

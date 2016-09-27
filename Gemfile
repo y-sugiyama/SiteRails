@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#ページネーション
+gem 'kaminari'
 #権限管理
 gem 'banken'
 gem 'cancancan'

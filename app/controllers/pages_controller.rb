@@ -3,7 +3,9 @@ class PagesController < ApplicationController
   end
   
   def news
-   # @post = Post.find(params[:id])
+    @posts = Post.all
+    
+    @posts = Post.order(:created_at).page(params[:page])
   end
 end
 
