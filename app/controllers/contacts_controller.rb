@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
     
     if @contact.valid?
        session[:contact] = @contact
-      redirect_to contacts_thanks_path
+      render :confirm
     else
       render :new
     end
@@ -20,11 +20,13 @@ class ContactsController < ApplicationController
   
   def thanks
      
-     @contact = Contact.find(session[:contact])
+   
+     @contact = Contact.new(session[:contact])
         #メールインスタンス生成用のメーラークラス.クラスメソッド.deliverメソッド→メール送信
-    MailSenderMailer.inquiry(@contact).deliver
+   
     
     if @contact.save
+       MailSenderMailer.inquiry(@contact).deliver
       session[:contact] = nil
       redirect_to top_path, notice:'お問い合わせメールの送信が完了しました'
     else

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :thank, :confirm]
   post 'contacts' => 'contacts#confirm'
   get 'contacts/confirm' => 'contacts#confirm'
-  get 'contacts/thanks' => 'contacts#thanks'
+  post 'contacts/thanks' => 'contacts#thanks'
   
   resources :posts
   
