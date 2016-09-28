@@ -22,7 +22,7 @@
     }
 
     .squere{
-        background-color: red;
+        background-color: gold;
         /*透過性*/
         opacity: 0.8;
         padding: 15px 15px;
@@ -107,5 +107,25 @@ padding-right: 0;
 .col-md-4{
     background-color: lemonchiffon;
     padding-right:0px;
+}
+
+
+#news{
+    /*背景色を透明に*/
+    background-color:  transparent;
+    margin-top: 10px;
+
+}
+
+#news h3{
+    text-align: center;
+}
+#news h6{
+    text-align: center;
+    background-color: pink;
+}
+.thumbnail{
+    padding-top:10px;
+    height: 200px;
 }
 
